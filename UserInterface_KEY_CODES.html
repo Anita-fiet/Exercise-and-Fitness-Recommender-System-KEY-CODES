@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise and Fitness Recommendation System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Exercise and Fitness Recommendation System</h1>
+
+  <div id="login-form">
+    <h2>Login</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </div>
+
+  <div id="main-content">
+    <h2>Welcome!</h2>
+    <p>Please provide your personal information and we will recommend exercises and workouts tailored to your needs.</p>
+
+    <form action="/register" method="POST">
+      <input type="text" name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <input type="password" name="password" placeholder="Password">
+      <input type="date" name="date_of_birth" placeholder="Date of birth">
+      <input type="number" name="weight" placeholder="Weight in pounds">
+      <input type="number" name="height" placeholder="Height in inches">
+      <select name="fitness_goal">
+        <option value="weight_loss">Weight loss</option>
+        <option value="muscle_gain">Muscle gain</option>
+        <option value="improved_cardiovascular_health">Improved cardiovascular health</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript code to handle login and form submission
+	function validateRegistrationForm() {
+  // Validate the name, email, password, date of birth, weight, height, and fitness goal fields
+  if (!nameInput.value || !emailInput.value || !passwordInput.value || !dateOfBirthInput.value || !weightInput.value || !heightInput.value || !fitnessGoalSelect.value) {
+    return false;
+  }
+
+  // Submit the form if it is valid
+  registrationForm.submit();
+  return true;
+}
+
+// Add an event listener to the registration form submit button
+registrationFormSubmitButton.addEventListener("click", validateRegistrationForm);
+
+  </script>
+</body>
+</html>
